@@ -1,0 +1,124 @@
+.hero {
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    &::before {
+        z-index: 0;
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(0deg, #98c3e8 28.39%, rgba(152, 195, 232, 0) 100%);
+        opacity: 0.2;
+    }
+
+    @include desktop {
+        flex-direction: row;
+    }
+
+    @include tablet {
+        // flex-direction: row;
+    }
+
+    @include mobile {
+        // flex-direction: row;
+    }
+    
+
+
+    &__description {
+
+        @include desktop {
+            width: 510px;
+            margin-top: 100px;
+            margin-bottom: 190px;
+        }
+
+        @include tablet {
+
+        }
+
+        @include mobile {
+
+        }
+
+        
+        h1 {
+            font-family: 'Galien', sans-serif;
+            color: rgba(31, 63, 104, 1);
+            font-weight: 700;
+            letter-spacing: 4%;
+
+            
+            @include desktop {
+                font-size: 64px;
+                line-height: 74px;
+                
+                margin-bottom: 32px;
+            }
+
+            @include tablet {
+
+            }
+
+            @include mobile {
+
+            }
+        }
+
+        p {
+            font-weight: 400;
+            opacity: 0.6;
+
+            @include desktop {
+                font-size: 16px;
+                line-height: 26px;
+                letter-spacing: 5%;
+
+                width: 425px;
+                margin-bottom: 71px;
+            }
+
+            @include tablet {
+
+            }
+
+            @include mobile {
+
+            }
+        }
+
+        a {
+            border-radius: 10px;
+            background-color: rgba(90, 152, 208, 1);
+            box-shadow: 5px 10px 20px 0 rgba(53, 110, 173, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-weight: 400;
+            color: #fff;
+            text-align: center;
+            
+
+            @include desktop {
+                width: 220px;
+                height: 56px;
+
+                font-size: 16px;
+                line-height: 26px;
+                letter-spacing: 4%;
+            }
+        }
+    }
+
+    img {
+        position: absolute;
+        top: 0px;
+        left: 655px;
+        
+    }
+}

@@ -1,0 +1,38 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include desktop {
+        height: 48px;
+        margin: 0px 83px;
+        margin-top: 40px;
+    }
+
+    &__theme-switch {
+        
+    }
+
+    &__burger-menu {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+        @include desktop {
+            width: 32px;
+            height: 32px;
+        }
+
+        @include tablet {
+
+        }
+
+        @include mobile {
+
+        }
+    }
+
+
+}

@@ -1,0 +1,92 @@
+.contact-us {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(49, 96, 153, 1);
+    position: relative;
+
+    &__block {
+        display: flex;
+        align-items: center;
+
+        @include desktop {
+            margin-top: 91px;
+        }
+    }
+
+    &__description {
+
+        @include desktop {
+            margin-bottom: 96px;
+        }
+
+        h2 {
+            color: #fff;
+            font-weight: 600;
+
+            @include desktop {
+                font-size: 36px;
+                line-height: 46px;
+                letter-spacing: 5%;
+
+                width: 317px;
+                margin-bottom: 32px;
+            }
+
+            @include tablet {
+
+            }
+
+            @include mobile {
+
+            }
+        }
+
+        p {
+            font-weight: 400;
+            opacity: 0.6;
+            color: #fff;
+
+            @include desktop {
+                font-size: 16px;
+                line-height: 26px;
+                letter-spacing: 5%;
+
+                width: 460px;
+            }
+
+            @include tablet {
+
+            }
+
+            @include mobile {
+
+            }
+        }
+    }
+
+    &__go-to-form {
+        background-color: rgba(90, 152, 208, 1);
+        border-radius: 10px;
+        color: #fff;
+
+
+        @include desktop {
+            width: 220px;
+            height: 56px;
+            
+            margin-left: 180px;
+        }
+    }
+
+
+    &__line {
+        position: absolute;
+        width: 1073px;
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        bottom: 0;
+        left: 0;
+        
+    }
+}

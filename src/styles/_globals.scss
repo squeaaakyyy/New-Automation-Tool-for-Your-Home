@@ -1,0 +1,53 @@
+$desktop-width: 1366px;
+$tablet-width: 768px;
+$mobile-width: 360px;
+
+
+@mixin desktop {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (min-width: $mobile-width) {
+    @content;
+  }
+}
+
+
+body {
+
+  display: flex;
+  flex-direction: column;
+  // background-color: black;
+  // align-items: center;
+
+  // font-family: 'Gilroy', 'san-serif';
+
+}
+
+.container {
+  // width: 88.75%;
+
+  z-index: 10;
+
+  @include mobile {
+    width: 350px;
+  }
+
+  @include tablet {
+      width: 682px;
+  }
+  
+  @include desktop {
+    width: 940px;
+  }
+
+}
