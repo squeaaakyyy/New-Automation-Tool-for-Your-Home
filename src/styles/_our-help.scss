@@ -1,27 +1,54 @@
 .our-help {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     position: relative;
 
-    @include desktop {
-        margin-top: 180px;
-        margin-left: 213px;
+    @include mobile {
+        margin-top: 40px;
+        flex-direction: column;
+        align-items: center;
     }
 
     @include tablet {
-
+        margin-top: 90px;
+        flex-direction: column;
+        align-items: center;
     }
 
-    @include mobile {
-
+    @include desktop {
+        margin-top: 180px;
+        // margin-left: 15.59vw;
+        flex-direction: row;
     }
+
 
     h2 {
-        position: absolute;
         font-weight: 600;
         color: rgba(49, 96, 153, 1);
         top: 0;
         left: 0px;
+
+        @include mobile {
+            font-size: 20px;
+            line-height: 28px;
+            letter-spacing: 5%;
+
+            width: 240px;
+            position: relative;
+
+            margin-bottom: 20px;
+        }
+
+        @include tablet {
+            font-size: 28px;
+            line-height: 38px;
+            letter-spacing: 5%;
+
+            width: 358px;
+            position: relative;
+
+            margin-bottom: 30px;
+        }
 
         @include desktop {
             font-size: 36px;
@@ -29,35 +56,40 @@
             letter-spacing: 5%;
 
             width: 358px;
-        }
+            position: absolute;
 
-        @include tablet {
-
-        }
-
-        @include mobile {
-
+            margin-bottom: 0px;
         }
     }
 
     ul {
 
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-
-        @include desktop {
-           width: 940px; 
-        }
-        
-        @include tablet {
-
-        }
 
         @include mobile {
+            width: 260px;
 
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
         }
+
+        @include tablet {
+            width: 682px;
+
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        @include desktop {
+            width: 940px;
+
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
     }
 
     li {
@@ -70,21 +102,42 @@
         flex-direction: column;
         align-items: center;
 
+        @include mobile {
+            width: 164px;
+            padding: 24px;
+        }
+
+        @include tablet {
+            width: 284px;
+            padding: 48px;
+        }
+
         @include desktop {
             width: 284px;
             padding: 48px;
         }
 
-        @include tablet {
-
-        }
-
-        @include mobile {
-
-        }
 
         h3 {
             font-weight: 600;
+
+            @include mobile {
+                font-size: 18px;
+                line-height: 24px;
+                letter-spacing: 5%;
+
+                margin-top: 26px;
+                margin-bottom: 16px;
+            }
+
+            @include tablet {
+                font-size: 20px;
+                line-height: 30px;
+                letter-spacing: 5%;
+
+                margin-top: 56px;
+                margin-bottom: 16px;
+            }
 
             @include desktop {
                 font-size: 20px;
@@ -95,17 +148,28 @@
                 margin-bottom: 16px;
             }
 
-            @include tablet {
-
-            }
-
-            @include mobile {
-
-            }
         }
 
         p {
             font-weight: 400;
+
+            @include mobile {
+                font-size: 16px;
+                line-height: 20px;
+                letter-spacing: 5%;
+                opacity: 0.6;
+
+                margin-bottom: 32px;
+            }
+
+            @include tablet {
+                font-size: 16px;
+                line-height: 26px;
+                letter-spacing: 5%;
+                opacity: 0.6;
+
+                margin-bottom: 32px;
+            }
 
             @include desktop {
                 font-size: 16px;
@@ -115,14 +179,6 @@
 
                 margin-bottom: 32px;
             }
-
-            @include tablet {
-
-            }
-
-            @include mobile {
-
-            }
         }
     }
 
@@ -131,6 +187,14 @@
         justify-content: space-between;
         align-items: center;
 
+        @include mobile {
+            width: 100%;
+        }
+
+        @include tablet {
+            width: 123px;
+        }
+
         @include desktop {
             width: 123px;
         }
@@ -138,6 +202,18 @@
         h4 {
             color: rgba(90, 152, 208, 1);
             font-weight: 600;
+
+            @include mobile {
+                font-size: 16px;
+                line-height: 30px;
+                letter-spacing: 5%;
+            }
+
+            @include tablet {
+                font-size: 14px;
+                line-height: 30px;
+                letter-spacing: 5%;
+            }
 
             @include desktop {
                 font-size: 14px;
@@ -149,25 +225,45 @@
 
     li:first-of-type {
 
+        @include mobile {
+            margin-top: 0px;
+            margin-left: 0px;
+            height: 100%;
+            
+            margin-bottom: 40px;
+        }
+
+        @include tablet {
+            margin-top: 0px;
+            margin-left: 0px;
+            height: 429px;
+            
+            margin-bottom: 40px;
+        }
+
         @include desktop {
             margin-top: 308px;
             margin-left: 80px;
             height: 429px;
+            
+            margin-bottom: 0px;
         }
 
         img {
 
-            @include desktop {
+            @include mobile {
                 width: 182px;
                 height: 132px;
             }
 
             @include tablet {
-
+                width: 182px;
+                height: 132px;
             }
 
-            @include mobile {
-
+            @include desktop {
+                width: 182px;
+                height: 132px;
             }
             
         }
@@ -179,52 +275,81 @@
 
         padding-top: 0px;
 
+        @include mobile {
+            height: 100%;
+
+            margin-bottom: 40px;
+        }
+
+        @include tablet {
+            height: 489px;
+
+            margin-bottom: 40px;
+        }
+
         @include desktop {
             height: 489px;
+            
+            margin-bottom: 0px;
         }
 
         img {
+
+            @include mobile {
+                // width: 224px;
+                // height: 197px;
+                // margin-top: -24px;
+            }
+
+            @include tablet {
+                width: 224px;
+                height: 197px;
+                margin-top: -24px;
+            }
 
             @include desktop {
                 width: 224px;
                 height: 197px;
                 margin-top: -24px;
             }
-
-            @include tablet {
-
-            }
-
-            @include mobile {
-
-            }
         }
 
     }
 
     li:last-of-type {
-        margin-left: auto;
+
+        @include tablet {
+            height: 100%px;
+
+            margin-top: 0px;
+
+            margin-left: 0;
+        }
 
         @include desktop {
             height: 429px;
 
             margin-top: -161px;
+
+            margin-left: auto;
         }
 
 
         img {
 
-            @include desktop {
+            @include mobile {
                 width: 156px;
                 height: 131px;
             }
 
             @include tablet {
-
+                width: 156px;
+                height: 131px;
             }
 
-            @include mobile {
-
+            @include desktop {
+                width: 156px;
+                height: 131px;
             }
         }
     }

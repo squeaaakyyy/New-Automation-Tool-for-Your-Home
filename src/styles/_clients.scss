@@ -4,55 +4,81 @@
     justify-content: center;
 
     background-color: rgba(90, 152, 208, 1);
-    border-top-left-radius: 200px;
+
+    @include mobile {
+        padding: 46px;
+        padding-bottom: 125px;
+        margin-top: 112px;
+        border-top-left-radius: 100px;
+        
+    }
+
+    @include tablet {
+        padding: 96px;
+        padding-bottom: 125px;
+        margin-top: 112px;
+        border-top-left-radius: 200px;
+    }
 
     @include desktop {
         padding: 96px;
         padding-bottom: 125px;
+        margin-top: 212px;
+        border-top-left-radius: 200px;
     }
 
-    @include tablet {
-
-    }
-
-    @include mobile {
-
-    }
 
     &__description {
         display: flex;
         justify-content: space-between;
 
-        @include desktop {
-            width: 860px;
+        @include mobile {
+            width: 100%;
+
+            flex-direction: column;
         }
         
         @include tablet {
+            width: 640px;
 
+            flex-direction: row;
         }
 
-        @include mobile {
-            
+        @include desktop {
+            width: 860px;
+
+            flex-direction: row;
         }
 
         h2 {
             font-weight: 600;
             color: #fff;
 
+            @include mobile {
+                font-size: 18px;
+                line-height: 20px;
+                letter-spacing: 5%;
+
+                width: 100%;
+                margin-bottom: 14px;
+            }
+
+            @include tablet {
+                font-size: 26px;
+                line-height: 32px;
+                letter-spacing: 5%;
+
+                width: 148px;
+                margin-bottom: 0px;
+            }
+
             @include desktop {
                 font-size: 36px;
                 line-height: 46px;
                 letter-spacing: 5%;
 
-                width: 223px;
-            }
-
-            @include tablet {
-
-            }
-
-            @include mobile {
-                
+                width: 223px; 
+                margin-bottom: 0px;
             }
         }
 
@@ -61,20 +87,28 @@
             opacity: 0.6;
             color: #fff;
 
+            @include mobile {
+                font-size: 16px;
+                line-height: 18px;
+                letter-spacing: 5%;
+
+                width: 100%;
+            }
+
+            @include tablet {
+                font-size: 16px;
+                line-height: 26px;
+                letter-spacing: 5%;
+
+                width: 420px;
+            }
+
             @include desktop {
                 font-size: 16px;
                 line-height: 26px;
                 letter-spacing: 5%;
 
                 width: 540px;
-            }
-
-            @include tablet {
-
-            }
-
-            @include mobile {
-                
             }
         }
     }
@@ -83,16 +117,16 @@
         display: flex;
         flex-wrap: wrap;
 
-        @include desktop {
-            margin-top: 111px;
+        @include mobile {
+            margin-top: 31px;
         }
 
         @include tablet {
-
+            margin-top: 61px;
         }
 
-        @include mobile {
-
+        @include desktop {
+            margin-top: 111px;
         }
 
         li {
@@ -106,6 +140,24 @@
 
             font-weight: 600;
 
+            @include mobile {
+                width: 100%;
+                height: 91px;
+
+                font-size: 18px;
+                line-height: 46px;
+                letter-spacing: 2%;
+            }
+            
+            @include tablet {
+                width: 169px;
+                height: 127px;
+
+                font-size: 20px;
+                line-height: 46px;
+                letter-spacing: 2%;
+            }
+
             @include desktop {
                 width: 234px;
                 height: 127px;
@@ -113,14 +165,6 @@
                 font-size: 20px;
                 line-height: 46px;
                 letter-spacing: 2%;
-            }
-            
-            @include tablet {
-
-            }
-
-            @include mobile {
-                
             }
         }
 
@@ -138,6 +182,17 @@
         li:nth-of-type(3),
         li:nth-of-type(4) {
             border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+        }
+
+        @include mobile {
+            li {
+                border: 1px solid rgba(255, 255, 255, 0.6);
+                border-top: none;
+            }
+
+            li:first-of-type {
+                border-top: 1px solid rgba(255, 255, 255, 0.6);
+            }
         }
     }
 

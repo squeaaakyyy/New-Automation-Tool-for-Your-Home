@@ -39,11 +39,11 @@ body {
   z-index: 10;
 
   @include mobile {
-    width: 350px;
+    width: 246px;
   }
 
   @include tablet {
-      width: 682px;
+    width: 682px;
   }
   
   @include desktop {
