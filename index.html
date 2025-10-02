@@ -112,59 +112,117 @@
             </div>
             <div class="contact-us__line"></div>
         </section>
+
+        <div class="modal" id="contactModal" aria-hidden="true">
+    <div class="modal__overlay"></div>
+    <div class="modal__content">
+      <button class="modal__close" aria-label="Close">&times;</button>
+      <h3 class="modal__title">SEND US MESSAGE</h3>
+      <form id="contactForm" novalidate>
+        <label>
+          Full Name
+          <input type="text" name="name" placeholder="Your Name">
+          <small class="error" data-error="name"></small>
+        </label>
+
+        <label>
+          Email
+          <input type="email" name="email" placeholder="Your Email">
+          <small class="error" data-error="email"></small>
+        </label>
+
+        <label>
+          Message
+          <textarea name="message" placeholder="Your Message"></textarea>
+          <small class="error" data-error="message"></small>
+        </label>
+        <small class="form-general-error error" data-error="form"></small>
+        <button type="submit" class="btn-submit">SUBMIT</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Попап успешной отправки -->
+  <div class="success" id="successPopup" hidden>
+    <div class="success__box">
+      <p>Your message successfully sent</p>
+      <button class="success__ok">OK</button>
+    </div>
+  </div>
         
 
         <footer class="footer">
-            <ul class="footer__lists">
-                <li class="footer__contact-info">
-                    <div class="footer__contact-title">
-                        <img src="public/Group.svg" alt="">
-                        <h4>Afrianska</h4>
-                    </div>
-                    <ul class="footer__contact-list">
-                        <li>
-                            <h5>A.</h5>
-                            <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h6>
-                        </li>
+            <div class="container">
+                <ul class="footer__lists">
+                    <li class="footer__contact-info">
+                        <div class="footer__contact-title">
+                            <img src="public/Group.svg" alt="">
+                            <h4>Afrianska</h4>
+                        </div>
+                        <ul class="footer__contact-list">
+                            <li>
+                                <h5>A.</h5>
+                                <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h6>
+                            </li>
 
-                        <li>
-                            <h5>T.</h5>
-                            <h6>+62-812-7313-4321</h6>
-                        </li>
+                            <li>
+                                <h5>T.</h5>
+                                <h6>+62-812-7313-4321</h6>
+                            </li>
 
-                        <li>
-                            <h5>E.</h5>
-                            <h6>hello.afrian@gmail.com</h6>
-                        </li>
-                    </ul>
-                </li>
+                            <li>
+                                <h5>E.</h5>
+                                <h6>hello.afrian@gmail.com</h6>
+                            </li>
+                        </ul>
+                    </li>
 
-                <li class="footer__links">
-                    <h4 class="footer__links-title">About US</h4>
+                    <li class="footer__links">
+                        <h4 class="footer__links-title">About US</h4>
 
-                    <ul class="footer__links-list">
-                        <li>About</li>
-                        <li>What We Do</li>
-                        <li>Project</li>
-                        <li>How It Work With Us</li>
-                    </ul>
-                </li>
+                        <ul class="footer__links-list">
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">What We Do</a></li>
+                            <li><a href="#">Project</a></li>
+                            <li><a href="#">How It Work With Us</a></li>
+                        </ul>
+                    </li>
 
-                <li class="footer__links">
-                    <h4 class="footer__links-title">Follow US</h4>
+                    <li class="footer__links">
+                        <h4 class="footer__links-title">Follow US</h4>
 
-                    <ul class="footer__links-list">
-                        <li>Instagram</li>
-                        <li>Facebook</li>
-                        <li>LinkedIn</li>
-                        <li>Youtube</li>
-                    </ul>
-                </li>
-            </ul>
+                        <ul class="footer__links-list">
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">LinkedIn</a></li>
+                            <li><a href="#">Youtube</a></li>
+                        </ul>
+                    </li>
+                </ul>
 
-            <div class="footer__watermark">2019 © Afrianska. All rights reserved.</div>
+                <div class="footer__watermark">2019 © Afrianska. All rights reserved.</div>
+            </div>
         </footer>
     </main>
-    
+
+    <script type="module">
+    import { initModal } from './src/js/modal.js';
+    import { initForm } from './src/js/form.js';
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const modal = document.getElementById('contactModal');
+      const openButton = document.querySelector('.contact-us__go-to-form');
+      const successPopup = document.getElementById('successPopup');
+
+      initModal({
+        modal,
+        trigger: openButton,
+        successPopup
+      });
+
+      const form = document.getElementById('contactForm');
+      initForm({ form, modal, successPopup });
+    });
+  </script>
   </body>
 </html>

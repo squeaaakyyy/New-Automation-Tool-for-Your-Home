@@ -145,7 +145,7 @@
         left: 0;
         
         @include mobile {
-            width: 283px;
+            width: 75%;
         }
 
         @include tablet {
@@ -153,7 +153,134 @@
         }
 
         @include desktop {
-            width: 100%;
+            width: 1073px;
         }
     }
+}
+
+.modal {
+  display: none; // по умолчанию скрыто
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; // перекрывает всё
+
+  &.active {
+    display: flex;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+  }
+
+  &__content {
+    position: relative;
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    max-width: 75%;
+    width: 90%;
+    z-index: 1001;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__close {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  &__title {
+    margin-bottom: 12px;
+    font-weight: 600;
+    font-size: 20px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    label {
+      display: flex;
+      flex-direction: column;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    input, textarea {
+      padding: 8px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    .error {
+      color: red;
+      font-size: 12px;
+      height: 12px;
+    }
+
+    .btn-submit {
+      margin-top: 8px;
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      background: #316099;
+      color: white;
+      cursor: pointer;
+    }
+  }
+}
+
+.success {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1002;
+
+  &.active {
+    display: flex;
+  }
+
+  &__box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+
+    p {
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    button {
+      padding: 8px 16px;
+      border-radius: 6px;
+      border: none;
+      background: #316099;
+      color: white;
+      cursor: pointer;
+    }
+  }
 }
