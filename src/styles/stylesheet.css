@@ -21,6 +21,7 @@ button {
 body {
   display: flex;
   flex-direction: column;
+  font-family: "Gilroy", "san-serif";
 }
 
 .container {
@@ -42,6 +43,30 @@ body {
   }
 }
 
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-300.woff2") format("woff2"), url("../fonts/Gilroy-300.woff2") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-400.woff2") format("woff2"), url("../fonts/Gilroy-400.woff2") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-600.woff2") format("woff2"), url("../fonts/Gilroy-600.woff2") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Galien";
+  src: url("../fonts/Galien-700.woff2") format("woff2"), url("../fonts/Galien-700.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
 .header {
   display: flex;
   justify-content: space-between;
@@ -149,10 +174,10 @@ body {
   }
 }
 .hero__description h1 {
-  font-family: "Galien", sans-serif;
   color: rgb(31, 63, 104);
   font-weight: 700;
   letter-spacing: 4%;
+  font-family: "Galien", "sans-serif";
 }
 @media (min-width: 360px) {
   .hero__description h1 {

@@ -206,23 +206,23 @@
     </main>
 
     <script type="module">
-    import { initModal } from './src/js/modal.js';
-    import { initForm } from './src/js/form.js';
+        import { initModal } from './src/js/modal.js';
+        import { initForm } from './src/js/form.js';
 
-    document.addEventListener('DOMContentLoaded', () => {
-      const modal = document.getElementById('contactModal');
-      const openButton = document.querySelector('.contact-us__go-to-form');
-      const successPopup = document.getElementById('successPopup');
+        document.addEventListener('DOMContentLoaded', () => {
+        const modal = document.getElementById('contactModal');
+        const openButton = document.querySelector('.contact-us__go-to-form');
+        const successPopup = document.getElementById('successPopup');
 
-      initModal({
-        modal,
-        trigger: openButton,
-        successPopup
-      });
+        initModal({
+            modal,
+            trigger: openButton,
+            successPopup
+        });
 
-      const form = document.getElementById('contactForm');
-      initForm({ form, modal, successPopup });
-    });
-  </script>
+        const form = document.getElementById('contactForm');
+        initForm({ form, modal, successPopup });
+        });
+    </script>
   </body>
 </html>
